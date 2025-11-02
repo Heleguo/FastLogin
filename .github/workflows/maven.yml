@@ -24,7 +24,7 @@ jobs:
           java-version: 21
           cache: 'maven'
       - name: Build Slimefun
-        run: mvn -s .mvn/settings.xml -B clean package --errors
+        run: mvn package --file pom.xml
       - name: Upload
         uses: actions/upload-artifact@v4.6.2
         with:
